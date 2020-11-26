@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Data schemas</h1>
+
+<div id=new_schema>
+    <form action="{% url 'add' %}">
+        <button type="submit" class="btn btn-success">New scheme</button>
+    </form>
+</div>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Modified</th>
+        <th>Actions</th>
+    </tr>
+    {% for sh in schemas %}
+        <tr>
+            <td><strong>{{ sh.id }}</strong></td>
+            <td><a href="#">{{ sh.name }}</a></td>
+            <td>{{ sh.date_of_modified }}</td>
+            <td><a href="#"> Edit scheme </a><a href="#"> Delete </a></td>
+        </tr>
+    {% endfor %}
+</table>
+
+{% endblock content %}

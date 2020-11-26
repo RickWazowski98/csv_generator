@@ -1,0 +1,12 @@
+#body {
+    text-align: center;
+}
+#form_login {
+    text-align: center;
+    display: inline-block;
+    margin-top: 1em;
+}
+#new_schema {
+    text-align: right;
+    margin-bottom: 1em;
+}
